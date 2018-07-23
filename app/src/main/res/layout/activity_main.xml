@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_welcome_to"
+            android:textSize="@dimen/login_size"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_special"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/login_size_special"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_friends"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/login_friends"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_btn_height_size"
+        android:layout_gravity="bottom"
+        android:textAllCaps="false"
+        android:text="@string/facebook_login_button"
+        android:textSize="@dimen/login_button"
+        android:theme="@style/loginBtn"
+        android:background="@drawable/rounded_button"
+        android:layout_marginLeft="@dimen/login_btn_lateral_margin"
+        android:layout_marginRight="@dimen/login_btn_lateral_margin"
+        android:layout_marginBottom="@dimen/login_btn_lateral_margin"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

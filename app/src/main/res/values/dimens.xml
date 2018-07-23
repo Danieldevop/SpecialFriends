@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="login_size">22sp</dimen>
+    <dimen name="login_size_special">40sp</dimen>
+    <dimen name="login_friends">50sp</dimen>
+    <dimen name="login_button">18sp</dimen>
+    <dimen name="login_btn_height_size">56dp</dimen>
+    <dimen name="login_btn_lateral_margin">12dp</dimen>
+</resources>

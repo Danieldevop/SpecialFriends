@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SpecialFriends</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="login_welcome_to">Welcome to</string>
+    <string name="login_special">SPECIAL</string>
+    <string name="login_friends">FRIENDS</string>
+    <string name="facebook_login_button">Enter with Facebook</string>
+</resources>
