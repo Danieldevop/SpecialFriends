@@ -9,5 +9,6 @@
     <string name="fb_login_protocol_scheme">fb2121340974800899</string>
     <string name="cancel_login">Login cancelled</string>
     <string name="error_login">Facebook Login Error</string>
+    <string name="fb_f_name">Facebook Friend Name</string>
 
 </resources>
