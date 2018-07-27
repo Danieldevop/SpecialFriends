@@ -11,6 +11,14 @@
 
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOLA"
+        android:gravity="center"
+
+        />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fb_profile_image"
         android:layout_width="@dimen/fb_profile_image_size"
