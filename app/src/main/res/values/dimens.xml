@@ -11,4 +11,7 @@
     <dimen name="fb_checkbox_right">8dp</dimen>
     <dimen name="item_pad">16dp</dimen>
     <dimen name="item_pad_right">24dp</dimen>
+    <dimen name="login_friends">50sp</dimen>
+    <dimen name="fb_toolbar_profile_name">22sp</dimen>
+    <dimen name="toolbar_fb_profile_image_margin">10dp</dimen>
 </resources>

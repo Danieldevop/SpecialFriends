@@ -10,5 +10,6 @@
     <string name="cancel_login">Login cancelled</string>
     <string name="error_login">Facebook Login Error</string>
     <string name="fb_f_name">Facebook Friend Name</string>
+    <string name="profile">Profile</string>
 
 </resources>
