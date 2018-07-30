@@ -1,9 +1,10 @@
 package us.happycart.specialfriends.view;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,21 +20,32 @@ import com.facebook.login.LoginManager;
 
 import org.json.JSONException;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import us.happycart.specialfriends.Adapters.FacebookFriendsAdapter;
+import us.happycart.specialfriends.Adapters.FacebookFriendsAdapterHorizontal;
 import us.happycart.specialfriends.LoginActivity;
 import us.happycart.specialfriends.R;
 
 public class HomeActivity extends AppCompatActivity {
 
+    //RecyclerView
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
     private static final String TAG = "HomeActivity";
     private CircleImageView profileImage;
     private TextView profileImageName;
 
+
+    private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -46,12 +58,12 @@ public class HomeActivity extends AppCompatActivity {
 
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
-
-        }
-
-        else {
+        } else {
             getName();
             getProfile();
+
+            Log.d(TAG, "RECYCLER VIEW: STARTED.");
+            initImagesBitmaps();
         }
     }
 
@@ -60,6 +72,62 @@ public class HomeActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    private void initImagesBitmaps() {
+        Log.d(TAG, "initImagesBitmaps: preparing Bitmaps");
+
+        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+        mNames.add("Havasu Falls");
+
+        mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
+        mNames.add("Trondheim");
+
+        mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
+        mNames.add("Portugal");
+
+        mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
+        mNames.add("Rocky Mountain National Park");
+
+
+        mImageUrls.add("https://i.redd.it/0h2gm1ix6p501.jpg");
+        mNames.add("Mahahual");
+
+        mImageUrls.add("https://i.redd.it/k98uzl68eh501.jpg");
+        mNames.add("Frozen Lake");
+
+
+        mImageUrls.add("https://i.redd.it/glin0nwndo501.jpg");
+        mNames.add("White Sands Desert");
+
+        mImageUrls.add("https://i.redd.it/obx4zydshg601.jpg");
+        mNames.add("Australia");
+
+        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
+        mNames.add("Washington");
+
+        initRecyclerView();
+        initRecyclerHorizontal();
+    }
+
+    private void initRecyclerHorizontal() {
+        Log.d(TAG, "THIS IS HORIZONTAL RECYCLER");
+        mRecyclerView = findViewById(R.id.recycler_view_horizontal);
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new FacebookFriendsAdapterHorizontal(this, mImageUrls, mNames);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
+
+    private void initRecyclerView() {
+        Log.d(TAG, "SETTING ADAPTER");
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new FacebookFriendsAdapter(this, mImageUrls, mNames);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
 
     private void goLoginScreen() {
         Intent intent = new Intent(this, LoginActivity.class);
@@ -106,7 +174,7 @@ public class HomeActivity extends AppCompatActivity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-                        Log.e(TAG, "PROFILE INFO: " + response.getJSONObject());
+                        Log.d(TAG, "PROFILE INFO: " + response.getJSONObject());
                         try {
                             Glide.with(getApplicationContext())
                                     .load(response.getJSONObject().getJSONObject("data").get("url"))

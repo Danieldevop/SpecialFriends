@@ -2,22 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/item_pad"
-    android:paddingRight="@dimen/item_pad_right"
+    android:paddingStart="@dimen/item_pad"
+    android:paddingEnd="@dimen/item_pad_right"
     android:paddingTop="@dimen/fab_margin"
     android:paddingBottom="@dimen/fab_margin"
     android:id="@+id/parent_layout"
     >
 
-
-
+    <!--
     <TextView
+        android:id="@+id/fb_dictionary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HOLA"
+        android:text="A"
+        android:background="@drawable/rounded_button"
         android:gravity="center"
-
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dictionary_size"
         />
+    -->
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fb_profile_image"
@@ -30,18 +33,10 @@
         android:id="@+id/fb_profile_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fb_profile_image"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/fb_profile_image"
-        android:layout_marginLeft="@dimen/text_fb_profile"
+        android:layout_marginLeft="@dimen/item_pad"
         android:text="@string/fb_f_name"
-        />
-
-    <CheckBox
-        android:id="@+id/fb_profile_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
         />
 
 </RelativeLayout>

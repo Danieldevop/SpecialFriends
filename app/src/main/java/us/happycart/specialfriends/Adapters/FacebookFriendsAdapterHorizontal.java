@@ -16,15 +16,14 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 import us.happycart.specialfriends.R;
 
-
-public class FacebookFriendsAdapter extends RecyclerView.Adapter<FacebookFriendsAdapter.ViewHolder> {
+public class FacebookFriendsAdapterHorizontal extends RecyclerView.Adapter<FacebookFriendsAdapterHorizontal.ViewHolder> {
 
     private static final String TAG = "RecyclerViewAdapter";
 
     private ArrayList<String> fbImagesFriends, fbNamesFriends;
     private Context mContext;
 
-    public FacebookFriendsAdapter(Context mContext, ArrayList<String> fbImagesFriends, ArrayList<String> fbNamesFriends) {
+    public FacebookFriendsAdapterHorizontal (Context mContext, ArrayList<String> fbImagesFriends, ArrayList<String> fbNamesFriends) {
         this.fbImagesFriends = fbImagesFriends;
         this.fbNamesFriends = fbNamesFriends;
         this.mContext = mContext;
@@ -32,14 +31,14 @@ public class FacebookFriendsAdapter extends RecyclerView.Adapter<FacebookFriends
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_holder_fb_friends, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+    public FacebookFriendsAdapterHorizontal.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_holder_fb_friends_horizontal, parent, false);
+        FacebookFriendsAdapterHorizontal.ViewHolder holder = new FacebookFriendsAdapterHorizontal.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FacebookFriendsAdapterHorizontal.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: LLAMADO.");
 
         Glide.with(mContext)
@@ -62,8 +61,8 @@ public class FacebookFriendsAdapter extends RecyclerView.Adapter<FacebookFriends
 
         public ViewHolder(View itemView) {
             super(itemView);
-            friendName = itemView.findViewById(R.id.fb_profile_text);
-            friendImage = itemView.findViewById(R.id.fb_profile_image);
+            friendName = itemView.findViewById(R.id.fb_profile_text_horizontal);
+            friendImage = itemView.findViewById(R.id.fb_profile_image_horizontal);
         }
 
     }
