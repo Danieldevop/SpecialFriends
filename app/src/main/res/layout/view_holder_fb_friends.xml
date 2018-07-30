@@ -49,8 +49,9 @@
         android:layout_marginTop="@dimen/text_image_top_margin"
         android:layout_marginRight="@dimen/fb_checkbox_right"
         android:layout_alignParentRight="true"
+        android:button="@drawable/checkbox_selector"
         />
 
-    <!--android:layout_centerVertical="true" -->
+    <!--android:layout_alignParentRight="true" -->
 
 </RelativeLayout>
