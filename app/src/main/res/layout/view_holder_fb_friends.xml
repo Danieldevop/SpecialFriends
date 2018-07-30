@@ -9,7 +9,7 @@
     android:id="@+id/parent_layout"
     >
 
-    <!--
+
     <TextView
         android:id="@+id/fb_dictionary"
         android:layout_width="match_parent"
@@ -19,14 +19,16 @@
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="@dimen/dictionary_size"
+
         />
-    -->
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fb_profile_image"
         android:layout_width="@dimen/fb_profile_image_size"
         android:layout_height="@dimen/fb_profile_image_size"
         android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="@dimen/circle_image_top_margin"
         />
 
     <TextView
@@ -34,9 +36,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/fb_profile_image"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/item_pad"
+        android:layout_marginStart="@dimen/item_pad"
         android:text="@string/fb_f_name"
+        android:textColor="@color/colorTextview"
+        android:textSize="@dimen/login_size"
+        android:layout_marginTop="@dimen/text_image_top_margin"
         />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_image_top_margin"
+        android:layout_marginRight="@dimen/fb_checkbox_right"
+        android:layout_alignParentRight="true"
+        />
+
+    <!--android:layout_centerVertical="true" -->
 
 </RelativeLayout>

@@ -5,11 +5,11 @@
     <string name="login_special">SPECIAL</string>
     <string name="login_friends">FRIENDS</string>
     <string name="facebook_login_button">Enter with Facebook</string>
-    <string name="facebook_app_id">2121340974800899</string>
-    <string name="fb_login_protocol_scheme">fb2121340974800899</string>
     <string name="cancel_login">Login cancelled</string>
     <string name="error_login">Facebook Login Error</string>
-    <string name="fb_f_name">Facebook Friend Name</string>
+    <string name="fb_f_name">Andrea Molina</string>
     <string name="profile">Profile</string>
+    <string name="facebook_app_id">1874933972566991</string>
+    <string name="fb_login_protocol_scheme">fb1874933972566991</string>
 
 </resources>

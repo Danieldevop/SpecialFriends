@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:paddingStart="@dimen/fab_margin"
     android:orientation="vertical"
+    android:paddingBottom="@dimen/fab_margin_bottom"
     >
 
     <de.hdodenhof.circleimageview.CircleImageView
