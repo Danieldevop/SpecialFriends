@@ -9,7 +9,6 @@
     android:id="@+id/parent_layout"
     >
 
-
     <TextView
         android:id="@+id/fb_dictionary"
         android:layout_width="match_parent"

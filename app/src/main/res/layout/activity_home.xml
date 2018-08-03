@@ -19,6 +19,17 @@
                 android:layout_height="wrap_content"
                 />
 
+            <android.support.v7.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_pad"
+                android:layout_marginEnd="@dimen/item_pad"
+                android:background="@drawable/searchbar"
+                android:layout_marginTop="@dimen/search_mt"
+                >
+
+            </android.support.v7.widget.SearchView>
+
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

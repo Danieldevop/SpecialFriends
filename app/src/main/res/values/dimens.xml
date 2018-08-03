@@ -20,4 +20,6 @@
     <dimen name="fab_margin_bottom">18dp</dimen>
     <dimen name="circle_image_top_margin">72dp</dimen>
     <dimen name="text_image_top_margin">86dp</dimen>
+    <dimen name="search_radius">8dp</dimen>
+    <dimen name="search_mt">11dp</dimen>
 </resources>
